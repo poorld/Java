@@ -1,0 +1,26 @@
+/*
+字节--》字符
+*/
+
+//获取键盘输入对象
+//InputStream in = System.in;
+
+//将字节对象转成字符流对象，使用转换流。InputStreamReader
+//InputStreamReader isr = new InputStreamReader(in);
+
+//为了提高效率，将字符串进行缓冲技术高效操作，使用BufferedReader
+//BufferedReader bufr = new BufferedReader(isr);
+
+//三合一*******************************************************************
+BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));//键盘录入最常见写法
+
+
+/*
+字符--》字节
+*/
+//OutputStream out = System.out;
+//OutputStreamWriter osw = new OutputStreamWriter(out);
+//BufferedWriter bufw = new BufferedReader(osw);
+
+//三合一*********************************************************************
+//BufferedWriter bufw = new BufferedReader(new OutputStreamWriter(System.out));

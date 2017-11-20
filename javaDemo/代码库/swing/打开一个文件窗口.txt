@@ -1,0 +1,9 @@
+if (e.getActionCommand() == "打开"){
+			int val = chooser.showOpenDialog(this);
+			if (val == chooser.APPROVE_OPTION){
+				file = chooser.getSelectedFile();
+			}
+			String fileName = file.getName();
+			flag = "你正在播放" + fileName;
+			this.setFrame(flag);
+		}

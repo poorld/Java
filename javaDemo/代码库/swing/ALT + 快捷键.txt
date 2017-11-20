@@ -1,0 +1,2 @@
+cd1 = new JMenu("нд╪Ч(F)");
+cd1.setMnemonic('F');

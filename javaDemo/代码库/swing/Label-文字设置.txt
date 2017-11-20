@@ -1,0 +1,3 @@
+zh = new JLabel("ÕÊ÷Å£÷",JLabel.CENTER);
+zh.setForeground(Color.BLACK);
+zh.setFont(new Font("ËÎÌו",Font.PLAIN,16));

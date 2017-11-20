@@ -1,0 +1,44 @@
+import java.io.*;
+import java.net.*;
+class PicThread implements Runnable
+{
+private Socket socket;
+public PicThread(Socket socket){
+	this.socket = socket;
+}
+	public void run(){
+		String ip = socket.getInetAddress().getHostAddress();
+		int count = 1;
+			try{
+								
+				System.out.println("ip"+ip+"....connected");
+
+				InputStream is = socket.getInputStream();
+				
+				File file = new File(ip+"("+(count)+")"+".png");
+				while (file.exists())
+				{
+					file = new File(ip+"("+(count++)+")"+".png");
+				}
+
+				FileOutputStream fos = new FileOutputStream(file);
+				byte[] buf = new byte[1024];
+				int len = 0;
+				while((len=is.read(buf))!=-1){
+					fos.write(buf,0,len);
+				}
+
+				OutputStream os = socket.getOutputStream();
+
+				os.write("恭喜你，上传成功！".getBytes());
+				
+				fos.close();
+				socket.close();
+				os.close();
+				is.close();
+
+			   } catch (Exception e){
+					throw new RuntimeException(ip + "上传失败!");
+				}
+	}
+}

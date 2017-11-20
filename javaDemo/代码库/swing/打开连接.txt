@@ -1,0 +1,4 @@
+ 1.java.net.URI uri = new java.net.URI("http://www.baidu.com");
+                  java.awt.Desktop.getDesktop().browse(uri);
+                  
+2.Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler http://www.baidu.com");

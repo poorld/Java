@@ -1,0 +1,2 @@
+ImageIcon image = new ImageIcon("image/icon/notes.png");
+		this.setIconImage(image.getImage());

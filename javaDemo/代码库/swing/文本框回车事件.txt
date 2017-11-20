@@ -1,0 +1,11 @@
+text.addKeyListener(new KeyAdapter() {
+	@Override
+	public void keyTyped(KeyEvent e) {
+		String content = text.getText();
+		if(e.getKeyChar() == KeyEvent.VK_ENTER){
+			area.append("我草：" + content + "\n");
+			text.setText("");
+				}
+			}
+		});
+//getKayCode不行,待解决

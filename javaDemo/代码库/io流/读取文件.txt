@@ -1,0 +1,5 @@
+//×Ö·ûÁ÷
+fis = new FileInputStream("C:/info.txt");
+
+//×Ö½ÚÁ÷
+bufr = new BufferedReader(new FileReader("c:/info.txt"));

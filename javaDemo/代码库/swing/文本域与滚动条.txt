@@ -1,0 +1,9 @@
+JTextArea wby;//文本域
+JScrollPane gdt;//滚动条
+
+wby = new JTextArea();
+
+gdt = new JScrollPane(wby);//这样添加，而不是gdt.add(wby);
+
+f.add(gdt);//最后只需添加滚动条
+

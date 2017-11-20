@@ -1,0 +1,77 @@
+//          ****************键盘到控制台1**************************
+
+BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));//键盘录入最常见写法
+	String line;
+		while (true){
+			try {
+				line = bufr.readLine();
+				System.out.println(line.toUpperCase());//转换成大写
+				if (line.equals("over")){
+					break;
+				}
+			} catch (IOException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+			
+		}
+
+
+//            *****************键盘到控制台2**************************
+
+BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+BufferedWriter bufw = new BufferedReader(new OutputStreamWriter(System.out));
+	String line = null;
+		while ((line=bufr.readLine()) != null){
+			try {
+				bufw.write(line.toUpperCase());
+				bufw.newLine();
+				bufw.flush();
+				if (line.equals("over")){
+					break;
+				}
+			} catch (IOException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+			
+		}
+
+
+//           ***********************键盘到文件******************************
+BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+BufferedWriter bufw = new BufferedReader(new OutputStreamWriter(new FileOutputStream("1.txt")));
+	String line = null;
+		while ((line=bufr.readLine()) != null){
+			try {
+				bufw.write(line.toUpperCase());
+				bufw.newLine();
+				bufw.flush();
+				if (line.equals("over")){
+					break;
+				}
+			} catch (IOException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+			
+		}
+
+//         *****************文件到控制台****************************
+BufferedReader bufr = new BufferedReader(new InputStreamReader(new FileInputStream(1.txt)));
+BufferedWriter bufw = new BufferedReader(new OutputStreamWriter(System.out));
+	String line = null;
+		while ((line=bufr.readLine()) != null){
+			try {
+				bufw.write(line.toUpperCase());
+				bufw.newLine();
+				bufw.flush();
+				if (line.equals("over")){
+					break;
+				}
+			} catch (IOException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+			
+		}

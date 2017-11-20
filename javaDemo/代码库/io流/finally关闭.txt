@@ -1,0 +1,14 @@
+finally{
+			
+			try{
+				fis.close();
+			}catch(IOException e){
+				throw new RuntimeException("∂¡»°πÿ±’ ß∞‹");
+			}
+			
+			try{
+				fos.close();
+			}catch(IOException e){
+				throw new RuntimeException("–¥»Îπÿ±’ ß∞‹");
+			}
+		}

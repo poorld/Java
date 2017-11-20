@@ -1,0 +1,2 @@
+bq2 = new JLabel("<html><a href='xdd520.xyz'>电影</a>");
+bq2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));//经过标签时变手势

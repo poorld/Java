@@ -1,0 +1,18 @@
+//读取文件
+InputStream is = new FileInputStream("d://1.txt");
+
+//字节流转换成字符流
+InputStreamReader isr = new InputStreamReader(is);
+
+//创建缓冲区，提高效率
+BufferedReader bufr = new BufferedReader(isr);
+
+********************  三合一  *************************
+
+BufferedReader bufr = new InputStreamReader(new FileInputStream("d://1.txt"));
+
+Sting line = null;
+
+while ((line = bufr.readLine())!=null){
+	System.out.println(line);
+}

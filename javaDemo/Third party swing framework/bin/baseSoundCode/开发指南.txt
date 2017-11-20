@@ -1,0 +1,45 @@
+第二步：如何使用BeautyEye L&F？
+
+加入以下代码，即可将你的Java程序界面更换成Beauty Eye的外观：
+
+public static void main(String[] args) {
+     try{         
+     	org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+     }     
+     catch(Exception e)     
+     {         
+     	//TODO exception     
+     }     
+    	..................... 你的程序代码 .........................     
+     	..................... 你的程序代码 ......................... 
+     } 
+
+
+
+ .....................   附录3：如何使用不同颜色的按钮？   .....................
+白色按钮
+btnInstance.setUI(new BEButtonUI(). setNormalColor(BEButtonUI.NormalColor.normal));
+
+绿色按钮
+btnInstance.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.green));
+
+啥色按钮
+btnInstance.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.lightBlue));
+
+蓝色按钮
+btnInstance.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.blue));
+
+红色按钮
+btnInstance.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.red));
+
+
+
+ .....................附录9：如何调置窗体背景全透明并完全隐藏一个窗体的标题栏？ .....................
+// set frame full transparent 
+frame.setUndecorated(true); 
+AWTUtilities.setWindowOpaque(frame, false); 
+frame.getRootPane().setWindowDecorationStyle(JRootPane.NONE); 
+
+
+
+     
